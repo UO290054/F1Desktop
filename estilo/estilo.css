@@ -234,7 +234,6 @@ dl dd:hover {
   border-left-color: #27AE60; /* Cambiar a un verde más claro al pasar el mouse */
 }
 
-
 /*===========================*/
 /* Estilos de Tablas         */
 /*===========================*/
@@ -297,5 +296,33 @@ audio {
 @media only screen and (max-width: 768px) {
   /* Especificidad 001 */
   body {
-      font-size: 0.875rem; 
-      margin: 0.5
+    font-size: 0.875rem; 
+    margin: 0.5rem; /* Margen para el cuerpo en pantallas pequeñas */
+  }
+  
+  /* Especificidad 002 - Ajustes en encabezados para pantallas pequeñas */
+  h1 {
+    font-size: 2rem; /* Reducir tamaño de h1 */
+  }
+
+  /* Especificidad 002 - Ajustes en encabezados para pantallas pequeñas */
+  h2 {
+    font-size: 1.5rem; /* Reducir tamaño de h2 */
+  }
+
+  /* Especificidad 002 - Ajustes en encabezados para pantallas pequeñas */
+  h3 {
+    font-size: 1.2rem; /* Reducir tamaño de h3 */
+  }
+  
+  /* Especificidad 002 - Ajustes en listas para pantallas pequeñas */
+  ul,
+  ol {
+    padding-left: 1rem; /* Reducir espaciado de listas */
+  }
+
+  /* Especificidad 002 - Ajustes en tablas para pantallas pequeñas */
+  table {
+    width: 100%; /* Mantener tablas dentro del ancho de la pantalla */
+  }
+}
