@@ -7,6 +7,10 @@
    - Fondo de encabezado y pie de página: #2C3E50 (azul oscuro)
 */
 
+/*===========================*/
+/* Estilos Generales         */
+/*===========================*/
+
 /* Especificidad 001 */
 body {
   font-family: Arial, sans-serif;
@@ -28,6 +32,10 @@ header {
   padding: 1rem;
   color: #FFFFFF; /* Texto blanco */
 }
+
+/*===========================*/
+/* Estilos de Títulos        */
+/*===========================*/
 
 /* Especificidad 001 */
 h1 {
@@ -77,13 +85,20 @@ h6 {
   color: #34495E; /* Azul neutro */
 }
 
+/*===========================*/
+/* Estilos de Navegación     */
+/*===========================*/
+
 /* Especificidad 011 - Estilo para las migas de navegación (p debajo del header) */
 header + p {
   font-size: 0.875rem; /* Tamaño de texto reducido */
   font-style: italic;  /* Cursiva para diferenciar */
   color: #333333;      /* Gris claro para mantener el contraste */
-  margin-bottom: 1rem; /* Espaciado para separar del contenido principal */
 }
+
+/*===========================*/
+/* Estilos de Enlaces        */
+/*===========================*/
 
 /* Cambiar color a los links */
 /* Especificidad 011 */
@@ -97,43 +112,132 @@ a:visited {
   color: #1E874B; /* Verde ajustado */
 }
 
-/* Cambiar forma y color a las listas */
-/* Especificidad 001 */
+/* Especificidad 002 - Estilo para enlaces externos no visitados */
+a[href^="http"]:not([href*="f1desktop.com"]):link {
+  color: #1E874B; /* Verde ajustado */
+  text-decoration: underline; /* Subrayado para indicar que es un enlace */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos visitados */
+a[href^="http"]:not([href*="f1desktop.com"]):visited {
+  color: #34495E; /* Azul neutro para enlaces visitados */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos al pasar el cursor (hover) */
+a[href^="http"]:not([href*="f1desktop.com"]):hover {
+  color: #27AE60; /* Verde más claro */
+  text-decoration: none; /* Elimina el subrayado al pasar el cursor */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos en foco (focus) */
+a[href^="http"]:not([href*="f1desktop.com"]):focus {
+  outline: 2px dotted #1E874B; /* Resaltar con borde punteado al obtener foco */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos activos (active) */
+a[href^="http"]:not([href*="f1desktop.com"]):active {
+  color: #2C3E50; /* Azul oscuro cuando el enlace está activo */
+}
+
+/*===========================*/
+/* Estilos de Listas         */
+/*===========================*/
+
+/* Especificidad 001 - Estilo para listas no ordenadas */
 ul {
-  list-style-type: square;
-  color: #34495E;
+  list-style-type: disc; /* Viñetas de disco por defecto */
+  padding-left: 1.5rem; /* Espaciado a la izquierda */
+  margin-bottom: 1rem; /* Espacio por debajo de la lista */
+  font-size: 1rem; /* Tamaño de fuente para la lista */
 }
 
-/* Especificidad 001 */
+/* Especificidad 002 - Estilo para elementos de listas no ordenadas */
+ul li {
+  color: #34495E; /* Color de texto azul neutro */
+  margin-bottom: 0.5rem; /* Espaciado entre elementos */
+}
+
+/* Especificidad 001 - Estilo para listas ordenadas */
 ol {
-  list-style-type: decimal;
-  color: #34495E;
+  list-style-type: upper-alpha; /* Letras mayúsculas como viñetas */
+  padding-left: 1.5rem; /* Espaciado a la izquierda */
+  margin-bottom: 1rem; /* Espacio por debajo de la lista */
+  font-size: 1rem; /* Tamaño de fuente para la lista */
 }
 
-/* Especificidad 002 */
-ul ul, ol ol {
-  list-style-type: circle;
+/* Especificidad 002 - Estilo para elementos de listas ordenadas */
+ol li {
+  color: #27AE60; /* Color de texto verde suave */
+  margin-bottom: 0.5rem; /* Espaciado entre elementos */
 }
 
-/* Especificidad 021 */
-.aficiones-list li:nth-child(3) {
-  color: #1E874B; /* Verde ajustado */
-  font-weight: bold;
+/* Especificidad 001 - Estilo para listas anidadas */
+ul ul {
+  list-style-type: circle; /* Viñetas de círculo para listas anidadas */
+  padding-left: 1.5rem; /* Espaciado a la izquierda */
 }
 
-/* Tablas de definición */
-/* Especificidad 002 */
+/* Especificidad 002 - Estilo para elementos de listas anidadas */
+ul ul li {
+  color: #333333; /* Color de texto gris oscuro */
+  font-style: italic; /* Cursiva para distinguir elementos anidados */
+  margin-bottom: 0.25rem; /* Espaciado más pequeño entre elementos anidados */
+}
+
+/* Especificidad 003 - Estilo para listas anidadas dentro de listas ordenadas */
+ol ol {
+  list-style-type: lower-roman; /* Números romanos para listas anidadas en listas ordenadas */
+  padding-left: 1.5rem; /* Espaciado a la izquierda */
+}
+
+/* Especificidad 002 - Estilo para elementos de listas anidadas dentro de listas ordenadas */
+ol ol li {
+  color: #34495E; /* Color de texto azul neutro */
+  margin-bottom: 0.25rem; /* Espaciado entre elementos anidados */
+}
+
+/*===========================*/
+/* Estilos para la Lista de Definición  */
+/*===========================*/
+
+/* Especificidad 002 - Estilo para el término a definir (dt) */
 dl dt {
-  font-weight: bold;
-  color: #1E874B; /* Verde ajustado */
+  font-weight: bold; /* Hacer el término en negrita */
+  font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
+  color: #1E874B; /* Color verde ajustado */
+  background-color: #F0F8FF; /* Fondo azul claro para resaltar el término */
+  padding: 0.5rem; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  margin: 0.5rem 0; /* Espaciado vertical */
+  transition: background-color 0.3s ease; /* Suavizar el cambio de color de fondo */
 }
 
-/* Especificidad 002 */
+/* Efecto hover para el término a definir */
+dl dt:hover {
+  background-color: #D4EDDA; /* Cambiar a un verde suave al pasar el mouse */
+}
+
+/* Especificidad 002 - Estilo para la definición (dd) */
 dl dd {
-  margin-left: 0;
+  margin-left: 1.5rem; /* Espaciado a la izquierda */
+  color: #333333; /* Color de texto gris oscuro */
+  font-size: 1rem; /* Tamaño de fuente normal */
+  line-height: 1.5; /* Espaciado entre líneas */
+  background-color: #F4F4F9; /* Fondo gris claro */
+  padding: 0.5rem; /* Espaciado interno */
+  border-left: 4px solid #1E874B; /* Borde izquierdo verde ajustado para destacar */
+  transition: border-left-color 0.3s ease; /* Suavizar el cambio de color del borde */
 }
 
-/* Tablas de temperaturas */
+/* Efecto hover para la definición */
+dl dd:hover {
+  border-left-color: #27AE60; /* Cambiar a un verde más claro al pasar el mouse */
+}
+
+
+/*===========================*/
+/* Estilos de Tablas         */
+/*===========================*/
 
 /* Especificidad 001 */
 table {
@@ -164,6 +268,10 @@ tbody tr:nth-child(odd) {
   color: #FFFFFF;
 }
 
+/*===========================*/
+/* Estilos de Multimedia      */
+/*===========================*/
+
 /* Adaptabilidad para elementos multimedia */
 /* Especificidad 001 */
 img {
@@ -183,40 +291,11 @@ audio {
   height: auto;
 }
 
+/*===========================*/
+/* Estilos de Media Queries   */
+/*===========================*/
 @media only screen and (max-width: 768px) {
   /* Especificidad 001 */
   body {
       font-size: 0.875rem; 
-      margin: 0.5rem;
-  }
-}
-
-/* Estilos para enlaces externos con especificidad */
-
-/* Especificidad 002 - Estilo para enlaces externos no visitados */
-a[href^="http"]:not([href*="f1desktop.com"]):link {
-  color: #1E874B; /* Verde oscuro */
-  text-decoration: underline; /* Subrayado para indicar que es un enlace */
-}
-
-/* Especificidad 002 - Estilo para enlaces externos visitados */
-a[href^="http"]:not([href*="f1desktop.com"]):visited {
-  color: #34495E; /* Azul neutro para enlaces visitados */
-}
-
-/* Especificidad 002 - Estilo para enlaces externos al pasar el cursor (hover) */
-a[href^="http"]:not([href*="f1desktop.com"]):hover {
-  color: #27AE60; /* Verde más claro */
-  text-decoration: none; /* Elimina el subrayado al pasar el cursor */
-}
-
-/* Especificidad 002 - Estilo para enlaces externos en foco (focus) */
-a[href^="http"]:not([href*="f1desktop.com"]):focus {
-  outline: 2px dotted #1E874B; /* Resaltar con borde punteado al obtener foco */
-}
-
-/* Especificidad 002 - Estilo para enlaces externos activos (active) */
-a[href^="http"]:not([href*="f1desktop.com"]):active {
-  color: #2C3E50; /* Azul oscuro cuando el enlace está activo */
-}
-
+      margin: 0.5
