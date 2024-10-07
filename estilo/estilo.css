@@ -1,0 +1,177 @@
+ /* datos personales: Raymond Debasa Peralta , UO290054 */
+/* Gama cromática seleccionada:
+   - Fondo principal: #F4F4F9 (gris claro suave)
+   - Color de texto: #333333 (gris oscuro)
+   - Color principal: #34495E (azul neutro)
+   - Color de acento: #27AE60 (verde suave)
+   - Fondo de encabezado y pie de página: #2C3E50 (azul oscuro)
+*/
+
+/* Especificidad 001 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4F4F9; /* Fondo gris claro */
+  color: #333333; /* Texto gris oscuro */
+}
+
+/* Especificidad 001 - Estilo para el pie de página */
+footer {
+background-color: #2C3E50; /* Fondo azul oscuro */
+color: #FFFFFF; /* Texto blanco */
+padding: 1rem;
+text-align: center;
+}
+
+/* Especificidad 001 - Estilo para el encabezado */
+header {
+background-color: #2C3E50; /* Fondo azul oscuro */
+padding: 1rem;
+color: #FFFFFF; /* Texto blanco */
+}
+
+/* Especificidad 001 */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #34495E; /* Azul neutro */
+  color: #FFFFFF;
+}
+
+/* Especificidad 001 */
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #34495E; /* Azul neutro */
+}
+
+/* Especificidad 001 */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #27AE60; /* Verde suave */
+}
+
+/* Especificidad 001 */
+h4 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #34495E; /* Azul neutro */
+}
+
+/* Especificidad 001 */
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #27AE60; /* Verde suave */
+}
+
+/* Especificidad 001 */
+h6 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #34495E; /* Azul neutro */
+}
+
+/* Cambiar color a los links */
+/* Especificidad 011 */
+a:link {
+  color: #34495E; /* Azul neutro */
+  text-decoration: underline;
+}
+
+/* Especificidad 011 */
+a:visited {
+  color: #27AE60; /* Verde suave */
+}
+
+/* Cambiar forma y color a las listas */
+/* Especificidad 001 */
+ul {
+  list-style-type: square;
+  color: #34495E;
+}
+/* Especificidad 001 */
+ol {
+  list-style-type: decimal;
+  color: #34495E;
+}
+/* Especificidad 002 */
+ul ul, ol ol {
+  list-style-type: circle;
+}
+
+/* Especificidad 021 */
+.aficiones-list li:nth-child(3) {
+  color: #27AE60; /* Verde suave */
+  font-weight: bold;
+}
+
+/* Tablas de definición */
+/* Especificidad 002 */
+dl dt {
+  font-weight: bold;
+  color: #27AE60; /* Verde suave */
+}
+
+/* Especificidad 002 */
+dl dd {
+  margin-left: 0;
+}
+
+/* Tablas de temperaturas */
+
+/* Especificidad 001 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+/* Especificidad 002 */
+thead th {
+  background-color: #34495E; /* Azul neutro */
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Especificidad 002 */
+tbody td {
+  border: 0.0625rem solid #27AE60; /* Verde suave */
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Especificidad 013 */
+tbody tr:nth-child(odd) {
+  background-color: #34495E; /* Azul neutro */
+  color: #FFFFFF;
+}
+
+/* Adaptabilidad para elementos multimedia */
+/* Especificidad 001 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Especificidad 001 */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Especificidad 001 */
+audio {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Especificidad 001 */
+  body {
+      font-size: 0.875rem; 
+      margin: 0.5rem;
+  }
+}

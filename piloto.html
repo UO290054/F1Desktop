@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Raymond Deabsa Peralta" />
+    <meta name="description" content="aquí cada documento debe tener la descripción del contenido concreto del mismo" />
+    <meta name="keywords" content="aquí cada documento debe tener la lista de las palabras clave del mismo separadas por comas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>titulo de la web</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+</head>
+<body>
+
+    <!-- Header agrupando el título y la navegación -->
+    <header>
+        <h1>F1 Desktop</h1>
+        <nav>
+            <a href="index.html" accesskey="1" tabindex="1">Inicio</a>
+            <a href="piloto.html" accesskey="2" tabindex="2">Piloto</a>
+            <a href="noticias.html" accesskey="3" tabindex="3">Noticias</a>
+            <a href="calendario.html" accesskey="4" tabindex="4">Calendario</a>
+            <a href="meteorologia.html" accesskey="5" tabindex="5">Meteorologia</a>
+            <a href="circuito.html" accesskey="6" tabindex="6">Circuito</a>
+            <a href="viajes.html" accesskey="7" tabindex="7">Viajes</a>
+            <a href="juegos.html" accesskey="8" tabindex="8">Juegos</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal específico del documento piloto -->
+    <main>
+        <h2>Piloto</h2>
+
+        <!-- Sección para la información personal del piloto -->
+        <section>
+            <h2> Información personal </h2>
+            <picture>
+                <!-- Imagen para móviles (max-width: 465px) -->
+                <source srcset="multimedia/imagenes/400EstebanOcon.jpg" media="(max-width: 465px)">
+                <!-- Imagen para tablets (max-width: 799px) -->
+                <source srcset="multimedia/imagenes/700EstebanOcon.jpg" media="(max-width: 799px)">
+                <!-- Imagen para monitores (min-width: 800px) -->
+                <source srcset="multimedia/imagenes/900EstebanOcon.jpg" media="(min-width: 800px)">
+                <!-- Imagen por defecto para otros dispositivos -->
+                <img src="multimedia/imagenes/900EstebanOcon.jpg" alt="Esteban Ocon, piloto de Fórmula 1">
+            </picture>
+            <p>Nombre: Esteban José Jean-Pierre Ocon-Khelfane</p>
+            <p>Apellidos: Ocon-Khelfane</p>
+            
+            <audio controls>
+                <p>Audio de una entrevista polémica en Mónaco</p>
+                <source src="multimedia/audios/audioSobreOcon.mp3" type="audio/mp3" />
+                <source src="multimedia/audios/audioSobreOcon.wav" type="audio/wav" />
+            </audio>
+            
+            <video controls>
+                <p>Esteban Ocon bloquea a Fernando Alonso</p>
+                <source src="multimedia/video/videoSobreOcon.mp4" type="video/mp4" />
+                <source src="multimedia/video/videoSobreOcon.webm" type="video/webm" />
+            </video>
+        </section>
+
+        <!-- Sección con información complementaria -->
+        <section>
+            <h2> Conóceme más </h2>
+            <!-- Lista de Aficiones -->
+            <h3>Mis aficiones</h3>
+            <ul>
+                <li>Sim Racing</li>
+                <li>Entrenamiento físico</li>
+                <li>Viajar</li>
+                <li>Ciclismo</li>
+                <li>Fútbol</li>
+            </ul>
+
+            <!-- Lista de equipos ordenada -->
+            <h3>Equipos para los que he competido</h3>
+            <ol>
+                <li>Manor Racing (2016)</li>
+                <li>Force India (2017-2018)</li>
+                <li>Racing Point (2019)</li>
+                <li>Renault (2020)</li>
+                <li>Alpine (2021-presente)</li>
+            </ol>
+
+            <!-- Lista de definición sobre Fórmula 1 -->
+            <h3>Conceptos relacionados con la Fórmula 1</h3>
+            <dl>
+                <dt>Pit Stop</dt>
+                <dd>Parada en boxes para cambiar neumáticos o hacer ajustes en el coche.</dd>
+                <dt>Pole Position</dt>
+                <dd>El lugar de salida más adelantado en la parrilla de una carrera.</dd>
+                <dt>Rake</dt>
+                <dd>La inclinación del coche desde la parte delantera hacia la trasera.</dd>
+                <dt>Efecto suelo</dt>
+                <dd>Tecnología aerodinámica que mejora el agarre del coche al asfalto mediante la succión.</dd>
+                <dt>DRS (Drag Reduction System)</dt>
+                <dd>Sistema que reduce la resistencia aerodinámica para facilitar los adelantamientos.</dd>
+            </dl>
+        </section>
+
+        <!-- Aside con los resultados destacados como información tangencial -->
+        <aside>
+            <h3>Resultados más destacados (últimos 3 años)</h3>
+            <ul>
+                <li>2023
+                    <ul>
+                        <li>Fórmula 1
+                            <ul>
+                                <li>Gran Premio de Mónaco: 3er lugar (podio)</li>
+                                <li>Gran Premio de Italia: 6to lugar</li>
+                            </ul>
+                        </li>
+                        <li>Sim Racing
+                            <ul>
+                                <li>Virtual Le Mans: 5to lugar</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>2022
+                    <ul>
+                        <li>Fórmula 1
+                            <ul>
+                                <li>Gran Premio de Hungría: 4to lugar</li>
+                                <li>Gran Premio de Francia: 8vo lugar</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>2021
+                    <ul>
+                        <li>Fórmula 1
+                            <ul>
+                                <li>Gran Premio de Hungría: 1er lugar (victoria)</li>
+                                <li>Gran Premio de Bélgica: 5to lugar</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Tabla de resultados de la última temporada -->
+        <section>
+            <h2>Resultados de la última temporada</h2>
+            <table>
+                <caption>Resultados de Esteban Ocon en la temporada 2023</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" id="puntos-obtenidos">Puntos obtenidos</th>
+                        <th scope="col" id="posicion-final">Posición en la clasificación</th>
+                        <th scope="col" id="poles">Poles</th>
+                        <th scope="col" id="victorias">Victorias</th>
+                        <th scope="col" id="podios">Podios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="puntos-obtenidos">58</td>
+                        <td headers="posicion-final">9º</td>
+                        <td headers="poles">0</td>
+                        <td headers="victorias">0</td>
+                        <td headers="podios">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <h2>Enlaces de interés</h2>
+    <a href="https://www.alpinecars.com/">Mi equipo Alpine</a>
+    <a href="https://www.formula1.com/">Fórmula 1</a>
+    <footer>
+       
+    </footer>
+
+</body>
+</html>
