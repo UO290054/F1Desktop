@@ -271,24 +271,34 @@ tbody tr:nth-child(odd) {
 /* Estilos de Multimedia      */
 /*===========================*/
 
-/* Adaptabilidad para elementos multimedia */
-/* Especificidad 001 */
+/* Especificidad 001 - Adaptabilidad para imágenes */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* La imagen no excederá el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Especificidad 001 */
+/* Especificidad 001 - Adaptabilidad para videos */
 video {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* El video no excederá el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción del video */
 }
 
-/* Especificidad 001 */
+/* Especificidad 001 - Adaptabilidad para audios */
 audio {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* El audio no excederá el ancho de su contenedor */
+  height: auto; /* Mantiene la proporción del audio */
 }
+
+/* Especificidad 001 - Contenedor para elementos multimedia */
+.media-container {
+  display: flex; /* Flexbox para alinear y centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin: 1rem 0; /* Espaciado vertical */
+  padding: 1rem; /* Espaciado interno */
+  background-color: #F4F4F9; /* Fondo gris claro */
+}
+
 
 /*===========================*/
 /* Estilos de Media Queries   */
