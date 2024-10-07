@@ -1,9 +1,9 @@
- /* datos personales: Raymond Debasa Peralta , UO290054 */
+/* datos personales: Raymond Debasa Peralta , UO290054 */
 /* Gama cromática seleccionada:
    - Fondo principal: #F4F4F9 (gris claro suave)
    - Color de texto: #333333 (gris oscuro)
    - Color principal: #34495E (azul neutro)
-   - Color de acento: #27AE60 (verde suave)
+   - Color de acento: #1E874B (verde ajustado para mejor contraste)
    - Fondo de encabezado y pie de página: #2C3E50 (azul oscuro)
 */
 
@@ -16,17 +16,17 @@ body {
 
 /* Especificidad 001 - Estilo para el pie de página */
 footer {
-background-color: #2C3E50; /* Fondo azul oscuro */
-color: #FFFFFF; /* Texto blanco */
-padding: 1rem;
-text-align: center;
+  background-color: #2C3E50; /* Fondo azul oscuro */
+  color: #FFFFFF; /* Texto blanco */
+  padding: 1rem;
+  text-align: center;
 }
 
 /* Especificidad 001 - Estilo para el encabezado */
 header {
-background-color: #2C3E50; /* Fondo azul oscuro */
-padding: 1rem;
-color: #FFFFFF; /* Texto blanco */
+  background-color: #2C3E50; /* Fondo azul oscuro */
+  padding: 1rem;
+  color: #FFFFFF; /* Texto blanco */
 }
 
 /* Especificidad 001 */
@@ -35,6 +35,11 @@ h1 {
   font-weight: bold;
   background-color: #34495E; /* Azul neutro */
   color: #FFFFFF;
+}
+
+/* Especificidad 002 - Elimina subrayado del enlace dentro del h1 */
+h1 a {
+  text-decoration: none; /* Elimina subrayado */
 }
 
 /* Especificidad 001 */
@@ -48,7 +53,7 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #27AE60; /* Verde suave */
+  color: #1E874B; /* Verde ajustado */
 }
 
 /* Especificidad 001 */
@@ -62,7 +67,7 @@ h4 {
 h5 {
   font-size: 1rem;
   font-weight: bold;
-  color: #27AE60; /* Verde suave */
+  color: #1E874B; /* Verde ajustado */
 }
 
 /* Especificidad 001 */
@@ -70,6 +75,14 @@ h6 {
   font-size: 0.9rem;
   font-weight: normal;
   color: #34495E; /* Azul neutro */
+}
+
+/* Especificidad 011 - Estilo para las migas de navegación (p debajo del header) */
+header + p {
+  font-size: 0.875rem; /* Tamaño de texto reducido */
+  font-style: italic;  /* Cursiva para diferenciar */
+  color: #333333;      /* Gris claro para mantener el contraste */
+  margin-bottom: 1rem; /* Espaciado para separar del contenido principal */
 }
 
 /* Cambiar color a los links */
@@ -81,7 +94,7 @@ a:link {
 
 /* Especificidad 011 */
 a:visited {
-  color: #27AE60; /* Verde suave */
+  color: #1E874B; /* Verde ajustado */
 }
 
 /* Cambiar forma y color a las listas */
@@ -90,11 +103,13 @@ ul {
   list-style-type: square;
   color: #34495E;
 }
+
 /* Especificidad 001 */
 ol {
   list-style-type: decimal;
   color: #34495E;
 }
+
 /* Especificidad 002 */
 ul ul, ol ol {
   list-style-type: circle;
@@ -102,7 +117,7 @@ ul ul, ol ol {
 
 /* Especificidad 021 */
 .aficiones-list li:nth-child(3) {
-  color: #27AE60; /* Verde suave */
+  color: #1E874B; /* Verde ajustado */
   font-weight: bold;
 }
 
@@ -110,7 +125,7 @@ ul ul, ol ol {
 /* Especificidad 002 */
 dl dt {
   font-weight: bold;
-  color: #27AE60; /* Verde suave */
+  color: #1E874B; /* Verde ajustado */
 }
 
 /* Especificidad 002 */
@@ -138,7 +153,7 @@ thead th {
 
 /* Especificidad 002 */
 tbody td {
-  border: 0.0625rem solid #27AE60; /* Verde suave */
+  border: 0.0625rem solid #1E874B; /* Verde ajustado */
   padding: 1rem;
   text-align: center;
 }
@@ -175,3 +190,33 @@ audio {
       margin: 0.5rem;
   }
 }
+
+/* Estilos para enlaces externos con especificidad */
+
+/* Especificidad 002 - Estilo para enlaces externos no visitados */
+a[href^="http"]:not([href*="f1desktop.com"]):link {
+  color: #1E874B; /* Verde oscuro */
+  text-decoration: underline; /* Subrayado para indicar que es un enlace */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos visitados */
+a[href^="http"]:not([href*="f1desktop.com"]):visited {
+  color: #34495E; /* Azul neutro para enlaces visitados */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos al pasar el cursor (hover) */
+a[href^="http"]:not([href*="f1desktop.com"]):hover {
+  color: #27AE60; /* Verde más claro */
+  text-decoration: none; /* Elimina el subrayado al pasar el cursor */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos en foco (focus) */
+a[href^="http"]:not([href*="f1desktop.com"]):focus {
+  outline: 2px dotted #1E874B; /* Resaltar con borde punteado al obtener foco */
+}
+
+/* Especificidad 002 - Estilo para enlaces externos activos (active) */
+a[href^="http"]:not([href*="f1desktop.com"]):active {
+  color: #2C3E50; /* Azul oscuro cuando el enlace está activo */
+}
+
