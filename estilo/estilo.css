@@ -1,9 +1,9 @@
 /* datos personales: Raymond Debasa Peralta , UO290054 */
 /* Gama cromática seleccionada:
-   - Fondo principal: #F4F4F9 (gris claro suave)
-   - Color de texto: #333333 (gris oscuro)
-   - Color principal: #34495E (azul neutro)
-   - Color de acento: #1E874B (verde ajustado para mejor contraste)
+   - Fondo principal: #FFFFFF (blanco)
+   - Color de texto: #000000 (negro)
+   - Color principal: #007BFF (azul brillante)
+   - Color de acento: #FF5733 (naranja brillante)
    - Fondo de encabezado y pie de página: #2C3E50 (azul oscuro)
 */
 
@@ -14,8 +14,8 @@
 /* Especificidad 001 */
 body {
   font-family: Arial, sans-serif;
-  background-color: #F4F4F9; /* Fondo gris claro */
-  color: #333333; /* Texto gris oscuro */
+  background-color: #FFFFFF; /* Fondo blanco */
+  color: #000000; /* Texto negro */
 }
 
 /* Especificidad 001 - Estilo para el pie de página */
@@ -41,7 +41,7 @@ header {
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  background-color: #34495E; /* Azul neutro */
+  background-color: #007BFF; /* Azul brillante */
   color: #FFFFFF;
 }
 
@@ -54,35 +54,35 @@ h1 a {
 h2 {
   font-size: 2rem;
   font-weight: normal;
-  color: #34495E; /* Azul neutro */
+  color: #007BFF; /* Azul brillante */
 }
 
 /* Especificidad 001 */
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1E874B; /* Verde ajustado */
+  color: #FF5733; /* Naranja brillante */
 }
 
 /* Especificidad 001 */
 h4 {
   font-size: 1.2rem;
   font-weight: normal;
-  color: #34495E; /* Azul neutro */
+  color: #007BFF; /* Azul brillante */
 }
 
 /* Especificidad 001 */
 h5 {
   font-size: 1rem;
   font-weight: bold;
-  color: #1E874B; /* Verde ajustado */
+  color: #FF5733; /* Naranja brillante */
 }
 
 /* Especificidad 001 */
 h6 {
   font-size: 0.9rem;
   font-weight: normal;
-  color: #34495E; /* Azul neutro */
+  color: #007BFF; /* Azul brillante */
 }
 
 /*===========================*/
@@ -93,7 +93,7 @@ h6 {
 header + p {
   font-size: 0.875rem; /* Tamaño de texto reducido */
   font-style: italic;  /* Cursiva para diferenciar */
-  color: #333333;      /* Gris claro para mantener el contraste */
+  color: #000000;      /* Texto negro */
 }
 
 /*===========================*/
@@ -103,35 +103,35 @@ header + p {
 /* Cambiar color a los links */
 /* Especificidad 011 */
 a:link {
-  color: #34495E; /* Azul neutro */
+  color: #007BFF; /* Azul brillante */
   text-decoration: underline;
 }
 
 /* Especificidad 011 */
 a:visited {
-  color: #1E874B; /* Verde ajustado */
+  color: #FF5733; /* Naranja brillante */
 }
 
 /* Especificidad 002 - Estilo para enlaces externos no visitados */
 a[href^="http"]:not([href*="f1desktop.com"]):link {
-  color: #1E874B; /* Verde ajustado */
+  color: #FF5733; /* Naranja brillante */
   text-decoration: underline; /* Subrayado para indicar que es un enlace */
 }
 
 /* Especificidad 002 - Estilo para enlaces externos visitados */
 a[href^="http"]:not([href*="f1desktop.com"]):visited {
-  color: #34495E; /* Azul neutro para enlaces visitados */
+  color: #007BFF; /* Azul brillante para enlaces visitados */
 }
 
 /* Especificidad 002 - Estilo para enlaces externos al pasar el cursor (hover) */
 a[href^="http"]:not([href*="f1desktop.com"]):hover {
-  color: #27AE60; /* Verde más claro */
+  color: #FF4500; /* Naranja más claro */
   text-decoration: none; /* Elimina el subrayado al pasar el cursor */
 }
 
 /* Especificidad 002 - Estilo para enlaces externos en foco (focus) */
 a[href^="http"]:not([href*="f1desktop.com"]):focus {
-  outline: 2px dotted #1E874B; /* Resaltar con borde punteado al obtener foco */
+  outline: 2px dotted #FF5733; /* Resaltar con borde punteado al obtener foco */
 }
 
 /* Especificidad 002 - Estilo para enlaces externos activos (active) */
@@ -153,7 +153,7 @@ ul {
 
 /* Especificidad 002 - Estilo para elementos de listas no ordenadas */
 ul li {
-  color: #34495E; /* Color de texto azul neutro */
+  color: #007BFF; /* Azul brillante */
   margin-bottom: 0.5rem; /* Espaciado entre elementos */
 }
 
@@ -167,7 +167,7 @@ ol {
 
 /* Especificidad 002 - Estilo para elementos de listas ordenadas */
 ol li {
-  color: #27AE60; /* Color de texto verde suave */
+  color: #FF5733; /* Naranja brillante */
   margin-bottom: 0.5rem; /* Espaciado entre elementos */
 }
 
@@ -179,7 +179,7 @@ ul ul {
 
 /* Especificidad 002 - Estilo para elementos de listas anidadas */
 ul ul li {
-  color: #333333; /* Color de texto gris oscuro */
+  color: #000000; /* Color de texto negro */
   font-style: italic; /* Cursiva para distinguir elementos anidados */
   margin-bottom: 0.25rem; /* Espaciado más pequeño entre elementos anidados */
 }
@@ -192,7 +192,7 @@ ol ol {
 
 /* Especificidad 002 - Estilo para elementos de listas anidadas dentro de listas ordenadas */
 ol ol li {
-  color: #34495E; /* Color de texto azul neutro */
+  color: #007BFF; /* Color de texto azul brillante */
   margin-bottom: 0.25rem; /* Espaciado entre elementos anidados */
 }
 
@@ -204,7 +204,7 @@ ol ol li {
 dl dt {
   font-weight: bold; /* Hacer el término en negrita */
   font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
-  color: #1E874B; /* Color verde ajustado */
+  color: #FF5733; /* Color naranja brillante */
   background-color: #F0F8FF; /* Fondo azul claro para resaltar el término */
   padding: 0.5rem; /* Espaciado interno */
   border-radius: 4px; /* Bordes redondeados */
@@ -214,24 +214,24 @@ dl dt {
 
 /* Efecto hover para el término a definir */
 dl dt:hover {
-  background-color: #D4EDDA; /* Cambiar a un verde suave al pasar el mouse */
+  background-color: #FFDAB9; /* Cambiar a un naranja suave al pasar el mouse */
 }
 
 /* Especificidad 002 - Estilo para la definición (dd) */
 dl dd {
   margin-left: 1.5rem; /* Espaciado a la izquierda */
-  color: #333333; /* Color de texto gris oscuro */
+  color: #000000; /* Color de texto negro */
   font-size: 1rem; /* Tamaño de fuente normal */
   line-height: 1.5; /* Espaciado entre líneas */
-  background-color: #F4F4F9; /* Fondo gris claro */
+  background-color: #FFFFFF; /* Fondo blanco */
   padding: 0.5rem; /* Espaciado interno */
-  border-left: 4px solid #1E874B; /* Borde izquierdo verde ajustado para destacar */
+  border-left: 4px solid #FF5733; /* Borde izquierdo naranja brillante para destacar */
   transition: border-left-color 0.3s ease; /* Suavizar el cambio de color del borde */
 }
 
 /* Efecto hover para la definición */
 dl dd:hover {
-  border-left-color: #27AE60; /* Cambiar a un verde más claro al pasar el mouse */
+  border-left-color: #FF4500; /* Cambiar a un naranja más claro al pasar el mouse */
 }
 
 /*===========================*/
@@ -247,7 +247,7 @@ table {
 
 /* Especificidad 002 */
 thead th {
-  background-color: #34495E; /* Azul neutro */
+  background-color: #007BFF; /* Azul brillante */
   color: #FFFFFF;
   font-weight: bold;
   padding: 1rem;
@@ -256,14 +256,14 @@ thead th {
 
 /* Especificidad 002 */
 tbody td {
-  border: 0.0625rem solid #1E874B; /* Verde ajustado */
+  border: 0.0625rem solid #FF5733; /* Naranja brillante */
   padding: 1rem;
   text-align: center;
 }
 
 /* Especificidad 013 */
 tbody tr:nth-child(odd) {
-  background-color: #34495E; /* Azul neutro */
+  background-color: #007BFF; /* Azul brillante */
   color: #FFFFFF;
 }
 
@@ -296,7 +296,7 @@ audio {
   align-items: center; /* Centra verticalmente */
   margin: 1rem 0; /* Espaciado vertical */
   padding: 1rem; /* Espaciado interno */
-  background-color: #F4F4F9; /* Fondo gris claro */
+  background-color: #FFFFFF; /* Fondo blanco */
 }
 
 

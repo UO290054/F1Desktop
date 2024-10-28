@@ -3,17 +3,14 @@
 <head>
  <!-- Datos que describen el documento -->
  <meta charset="UTF-8" />
- <meta name ="author" content ="Raymond Deabsa Peralta" />
- <meta name ="description" content ="aquí cada documento debe tener la
- descripción del contenido concreto del mismo" />
- <meta name ="keywords" content ="aquí cada documento debe tener la lista
-de las palabras clave del mismo separadas por comas" />
-<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ <meta name="author" content="Raymond Deabsa Peralta" />
+ <meta name="description" content="aquí cada documento debe tener la descripción del contenido concreto del mismo" />
+ <meta name="keywords" content="aquí cada documento debe tener la lista de las palabras clave del mismo separadas por comas" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>F1 Desktop</title>
- 
- 
+ <title>F1 Desktop</title>
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <script src="js/pais.js"></script>
 </head>
 <body>
   <!-- Header agrupando el título y la navegación -->
@@ -24,17 +21,32 @@ de las palabras clave del mismo separadas por comas" />
         <a href="piloto.html" accesskey="2" tabindex="2">Piloto</a>
         <a href="noticias.html" accesskey="3" tabindex="3">Noticias</a>
         <a href="calendario.html" accesskey="4" tabindex="4">Calendario</a>
-        <a href="meteorologia.html" accesskey="5" tabindex="5">Meteorologia</a>
+        <a href="meteorologia.html" accesskey="5" tabindex="5">Meteorología</a>
         <a href="circuito.html" accesskey="6" tabindex="6">Circuito</a>
         <a href="viajes.html" accesskey="7" tabindex="7">Viajes</a>
         <a href="juegos.html" accesskey="8" tabindex="8">Juegos</a>
     </nav>
-</header>
-<!-- Migas de navegación -->
-<p>Estás en: <a href="index.html">Inicio</a> >> Meteorologia</p>
- <h2>Meteorologia</h2> 
- <p>En desarrollo</p>
+  </header>
 
+  <!-- Migas de navegación -->
+  <p>Estás en: <a href="index.html">Inicio</a> >> Meteorología</p>
+
+  <h2>Meteorología</h2>
+  <!-- Aquí está la información que hemos agregado usando JavaScript -->
+  <section>
+    <h2>Datos sobre Países Bajos</h2>
+    <script>
+      // Creación del objeto Países Bajos y mostrar la información
+      const paisesBajos = new Pais('Países Bajos', 'Ámsterdam', 'Circuito de Zandvoort', 17480000);
+      paisesBajos.setAtributosExtras('Monarquía parlamentaria', '52.39°N, 4.54°E', 'Cristianismo');
+
+      document.write(paisesBajos.getInfoPrincipal());
+      document.write(paisesBajos.getInfoSecundaria());
+      paisesBajos.escribirCoordenadasMeta();
+    </script>
+  </section>
+
+ 
 
 </body>
 </html>
