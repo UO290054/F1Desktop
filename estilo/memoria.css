@@ -1,13 +1,13 @@
 /* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Ajusta según la paleta de tu página */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #00274d; /* Color de la paleta de tu página */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -67,12 +67,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    color: white;
 }
 
 .front-face {
-    background-color: #333;
+    background-color: #004080; /* Color oscuro de la paleta de tu página */
 }
 
 .back-face img {
@@ -81,6 +79,6 @@ main {
 }
 
 .back-face {
-    background-color: #555;
+    background-color: #0073e6; /* Color de fondo del reverso */
     transform: rotateY(180deg);
 }

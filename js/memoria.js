@@ -5,14 +5,20 @@ class Memoria {
         this.firstCard = null;
         this.secondCard = null;
         this.cards = document.querySelectorAll('.card');
+        this.matchedCards = 0; // Contador para las cartas emparejadas
+        this.totalPairs = this.cards.length / 2; // Total de pares de cartas
+        this.nuevaPartidaBtn = document.getElementById('nueva-partida-btn');
+        this.nuevaPartidaContainer = document.getElementById('nueva-partida-container');
+        
         this.shuffleCards();
         this.addEventListeners();
+        this.nuevaPartidaBtn.addEventListener('click', this.resetGame.bind(this));
     }
 
     // Método para barajar las tarjetas
     shuffleCards() {
         this.cards.forEach(card => {
-            let randomPos = Math.floor(Math.random() * 12);
+            let randomPos = Math.floor(Math.random() * this.cards.length);
             card.style.order = randomPos;
         });
     }
@@ -24,8 +30,8 @@ class Memoria {
 
     // Método para voltear la tarjeta
     flipCard(event) {
-        const card = event.target.closest('.card'); // Ajuste para detectar la tarjeta correctamente
-        if (this.lockBoard || card === this.firstCard) return;
+        const card = event.target.closest('.card');
+        if (this.lockBoard || card === this.firstCard || card.classList.contains('flip')) return;
         card.classList.add('flip');
 
         if (!this.hasFlippedCard) {
@@ -47,7 +53,11 @@ class Memoria {
     disableCards() {
         this.firstCard.removeEventListener('click', this.flipCard);
         this.secondCard.removeEventListener('click', this.flipCard);
+        this.matchedCards++; // Incrementa el contador de cartas emparejadas
         this.resetBoard();
+        if (this.matchedCards === this.totalPairs) {
+            this.showEndGame();
+        }
     }
 
     // Método para voltear las tarjetas si no son iguales
@@ -64,6 +74,28 @@ class Memoria {
     resetBoard() {
         [this.hasFlippedCard, this.lockBoard] = [false, false];
         [this.firstCard, this.secondCard] = [null, null];
+    }
+
+    // Mostrar el botón de "Nueva Partida" cuando el juego termina
+    showEndGame() {
+        setTimeout(() => {
+            this.nuevaPartidaContainer.style.display = 'block';
+        }, 500);
+    }
+
+    // Método para reiniciar el juego
+    resetGame() {
+        // Oculta el botón de nueva partida
+        this.nuevaPartidaContainer.style.display = 'none';
+        
+        // Reinicia las variables
+        this.matchedCards = 0;
+        this.cards.forEach(card => {
+            card.classList.remove('flip');
+        });
+
+        // Vuelve a barajar las cartas
+        this.shuffleCards();
     }
 }
 
