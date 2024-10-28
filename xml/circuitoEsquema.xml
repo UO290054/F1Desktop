@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE circuito SYSTEM "circuito.dtd">
 
-<circuito>
+<circuito xmlns="http://www.uniovi.es" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
     <nombre>Zandvoort</nombre>
     <longitudCircuito unidadMedida="km">4259</longitudCircuito> <!-- En kilómetros -->
     <anchura unidadMedida="m">12  </anchura> <!-- En metros -->
-    <fechaCarrera>25-08-2024</fechaCarrera>
-    <horaCarrera>15:00</horaCarrera> <!-- Hora de España (CET) -->
+    <fechaCarrera>2024-08-25</fechaCarrera>
+    <horaCarrera>15:00:00</horaCarrera> <!-- Hora de España (CET) -->
     <numeroVueltas>72</numeroVueltas>
     <localidad>Zandvoort</localidad>
     <pais>Países Bajos</pais>
@@ -35,7 +36,7 @@
     </coordenadasInicio>
     
     <tramosCircuito>
-        <tramo distancia="345.13m">
+        <tramo distancia="345.13">
             <longitud>4.5426313</longitud>
             <latitud>52.391604</latitud>
             <altitud>2</altitud>
@@ -44,7 +45,7 @@
     
 
         <!-- Punto 2 -->
-        <tramo distancia="85.26m">
+        <tramo distancia="85.26">
             <longitud>4.5433662</longitud>
             <latitud>52.3918364</latitud>
             <altitud>2</altitud>
@@ -53,7 +54,7 @@
     
 
         <!-- Punto 3 -->
-        <tramo distancia="61.37m">
+        <tramo distancia="61.37">
             <longitud>4.5437846</longitud>
             <latitud>52.3914731</latitud>
             <altitud>2</altitud>
@@ -62,7 +63,7 @@
     
 
         <!-- Punto 4 -->
-        <tramo distancia="161.07m">
+        <tramo distancia="161.07">
             <longitud>4.5429725</longitud>
             <latitud>52.3902682</latitud>
             <altitud>2</altitud>
@@ -71,7 +72,7 @@
     
 
         <!-- Punto 5 -->
-        <tramo distancia="120.88m">
+        <tramo distancia="120.88">
             <longitud>4.542833</longitud>
             <latitud>52.3891878</latitud>
             <altitud>2</altitud>
@@ -80,7 +81,7 @@
     
 
         <!-- Punto 6 -->
-        <tramo distancia="160.4m">
+        <tramo distancia="160.4">
             <longitud>4.541455</longitud>
             <latitud>52.3887365</latitud>
             <altitud>2</altitud>
@@ -89,7 +90,7 @@
     
 
         <!-- Punto 7 -->
-        <tramo distancia="50.21m">
+        <tramo distancia="50.21">
             <longitud>4.5411608</longitud>
             <latitud>52.3883919</latitud>
             <altitud>2</altitud>
@@ -98,7 +99,7 @@
     
 
         <!-- Punto 8 -->
-        <tramo distancia="70.57m">
+        <tramo distancia="70.57">
             <longitud>4.5417509</longitud>
             <latitud>52.3881497</latitud>
             <altitud>2</altitud>
@@ -107,7 +108,7 @@
     
 
         <!-- Punto 9 -->
-        <tramo distancia="264.06m">
+        <tramo distancia="264.06">
             <longitud>4.5441113</longitud>
             <latitud>52.3885098</latitud>
             <altitud>2</altitud>
@@ -116,7 +117,7 @@
     
 
         <!-- Punto 10 -->
-        <tramo distancia="316.33m">
+        <tramo distancia="316.33">
             <longitud>4.5469651</longitud>
             <latitud>52.3883134</latitud>
             <altitud>2</altitud>
@@ -125,7 +126,7 @@
     
 
         <!-- Punto 11 -->
-        <tramo distancia="251.15m">
+        <tramo distancia="251.15">
             <longitud>4.5491482</longitud>
             <latitud>52.3889376</latitud>
             <altitud>2</altitud>
@@ -134,7 +135,7 @@
     
 
         <!-- Punto 12 -->
-        <tramo distancia="307.0m">
+        <tramo distancia="307.0">
             <longitud>4.5519242</longitud>
             <latitud>52.3889039</latitud>
             <altitud>2</altitud>
@@ -143,7 +144,7 @@
     
 
         <!-- Punto 13 -->
-        <tramo distancia="127.66m">
+        <tramo distancia="127.66">
             <longitud>4.5529434</longitud>
             <latitud>52.3883637</latitud>
             <altitud>2</altitud>
@@ -152,7 +153,7 @@
     
 
         <!-- Punto 14 -->
-        <tramo distancia="79.21m">
+        <tramo distancia="79.21">
             <longitud>4.5529541</longitud>
             <latitud>52.38765</latitud>
             <altitud>2</altitud>
@@ -161,7 +162,7 @@
     
 
         <!-- Punto 15 -->
-        <tramo distancia="277.81m">
+        <tramo distancia="277.81">
             <longitud>4.5512268</longitud>
             <latitud>52.3858321</latitud>
             <altitud>2</altitud>
@@ -170,7 +171,7 @@
     
 
         <!-- Punto 16 -->
-        <tramo distancia="214.82m">
+        <tramo distancia="214.82">
             <longitud>4.5492849</longitud>
             <latitud>52.3858845</latitud>
             <altitud>2</altitud>
@@ -179,7 +180,7 @@
     
 
         <!-- Punto 17 -->
-        <tramo distancia="144.89m">
+        <tramo distancia="144.89">
             <longitud>4.5481476</longitud>
             <latitud>52.3865328</latitud>
             <altitud>2</altitud>
@@ -188,7 +189,7 @@
     
 
         <!-- Punto 18 -->
-        <tramo distancia="86.49m">
+        <tramo distancia="86.49">
             <longitud>4.5488342</longitud>
             <latitud>52.386906</latitud>
             <altitud>2</altitud>
@@ -197,7 +198,7 @@
     
 
         <!-- Punto 19 -->
-        <tramo distancia="218.85m">
+        <tramo distancia="218.85">
             <longitud>4.5507869</longitud>
             <latitud>52.3872269</latitud>
             <altitud>2</altitud>
@@ -206,7 +207,7 @@
     
 
         <!-- Punto 20 -->
-        <tramo distancia="62.68m">
+        <tramo distancia="62.68">
             <longitud>4.5511088</longitud>
             <latitud>52.3876918</latitud>
             <altitud>2</altitud>
@@ -215,7 +216,7 @@
     
 
         <!-- Punto 21 -->
-        <tramo distancia="89.4m">
+        <tramo distancia="89.4">
             <longitud>4.5503792</longitud>
             <latitud>52.3880388</latitud>
             <altitud>2</altitud>
@@ -224,7 +225,7 @@
     
 
         <!-- Punto 22 -->
-        <tramo distancia="398.94m">
+        <tramo distancia="398.94">
             <longitud>4.5467733</longitud>
             <latitud>52.3879266</latitud>
             <altitud>2</altitud>
@@ -233,7 +234,7 @@
     
 
         <!-- Punto 23 -->
-        <tramo distancia="327.76m">
+        <tramo distancia="327.76">
             <longitud>4.5438761</longitud>
             <latitud>52.3873034</latitud>
             <altitud>2</altitud>
@@ -242,7 +243,7 @@
     
 
         <!-- Punto 24 -->
-        <tramo distancia="88.97m">
+        <tramo distancia="88.97">
             <longitud>4.5430929</longitud>
             <latitud>52.38712</latitud>
             <altitud>2</altitud>
@@ -251,7 +252,7 @@
     
 
         <!-- Punto 25 -->
-        <tramo distancia="91.42m">
+        <tramo distancia="91.42">
             <longitud>4.5423526</longitud>
             <latitud>52.3874867</latitud>
             <altitud>2</altitud>
@@ -260,7 +261,7 @@
     
 
         <!-- Punto 26 -->
-        <tramo distancia="70.94m">
+        <tramo distancia="70.94">
             <longitud>4.5419341</longitud>
             <latitud>52.3870022</latitud>
             <altitud>2</altitud>
@@ -269,7 +270,7 @@
     
 
         <!-- Punto 27 -->
-        <tramo distancia="234.46m">
+        <tramo distancia="234.46">
             <longitud>4.5425536</longitud>
             <latitud>52.3849816</latitud>
             <altitud>2</altitud>
@@ -278,7 +279,7 @@
     
 
         <!-- Punto 28 -->
-        <tramo distancia="92.73m">
+        <tramo distancia="92.73">
             <longitud>4.5419528</longitud>
             <latitud>52.3843987</latitud>
             <altitud>2</altitud>
@@ -287,7 +288,7 @@
     
 
         <!-- Punto 29 -->
-        <tramo distancia="274.19m">
+        <tramo distancia="274.19">
             <longitud>4.5394795</longitud>
             <latitud>52.3845737</latitud>
             <altitud>2</altitud>
@@ -296,7 +297,7 @@
     
 
         <!-- Punto 30 -->
-        <tramo distancia="156.1m">
+        <tramo distancia="156.1">
             <longitud>4.5386426</longitud>
             <latitud>52.3857065</latitud>
             <altitud>2</altitud>
@@ -305,7 +306,7 @@
     
 
         <!-- Punto 31 -->
-        <tramo distancia="177.85m">
+        <tramo distancia="177.85">
             <longitud>4.5395439</longitud>
             <latitud>52.3870339</latitud>
             <altitud>2</altitud>
@@ -314,7 +315,7 @@
     
 
         <!-- Punto 32 -->
-        <tramo distancia="189.61m">
+        <tramo distancia="189.61">
             <longitud>4.5404865</longitud>
             <latitud>52.3884612</latitud>
             <altitud>2</altitud>
@@ -323,7 +324,7 @@
     
 
         <!-- Punto 33 /Inicio-->
-        <tramo distancia="76.99m">
+        <tramo distancia="76.99">
             <longitud>4.5409264</longitud>
             <latitud>52.388999</latitud>
             <altitud>2</altitud>

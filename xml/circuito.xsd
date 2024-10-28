@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.uniovi.es"
+           xmlns="http://www.uniovi.es"
+           elementFormDefault="qualified">    <xs:element name="circuito">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" />
+                <xs:element ref="longitudCircuito" />
+                <xs:element ref="anchura" />
+                <xs:element ref="fechaCarrera" />
+                <xs:element ref="horaCarrera" />
+                <xs:element ref="numeroVueltas" />
+                <xs:element ref="localidad" />
+                <xs:element ref="pais" />
+                <xs:element ref="referencias" />
+                <xs:element ref="galeriaFotografias" />
+                <xs:element minOccurs="0" maxOccurs="1" ref="galeriaVideos" />
+                <xs:element ref="coordenadasInicio" />
+                <xs:element ref="tramosCircuito" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de los elementos -->
+    <xs:element name="nombre" type="xs:string" />
+    
+    <!-- Longitud del circuito con tipo float -->
+    <xs:element name="longitudCircuito">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:float">
+                    <xs:attribute name="unidadMedida" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- Anchura del circuito con tipo float -->
+    <xs:element name="anchura">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:float">
+                    <xs:attribute name="unidadMedida" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Fecha de la carrera con tipo date -->
+    <xs:element name="fechaCarrera" type="xs:date" />
+
+    <!-- Hora de la carrera con tipo time -->
+    <xs:element name="horaCarrera" type="xs:time" />
+
+    <!-- Número de vueltas con restricción entre 1 y 1000 -->
+    <xs:element name="numeroVueltas">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1" />
+                <xs:maxInclusive value="1000" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Localidad y país -->
+    <xs:element name="localidad" type="xs:string" />
+    <xs:element name="pais" type="xs:string" />
+
+    <!-- Referencias -->
+    <xs:element name="referencias">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="referencia" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="referencia" type="xs:string" />
+
+    <!-- Galería de fotografías con restricción de entre 1 y 5 fotos -->
+    <xs:element name="galeriaFotografias">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="5" ref="foto" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="foto" type="xs:string" />
+
+    <!-- Galería de videos con restricción de entre 0 y 3 videos -->
+    <xs:element name="galeriaVideos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="3" ref="video" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="video" type="xs:string" />
+
+    <!-- Coordenadas geográficas -->
+    <xs:element name="coordenadasInicio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="longitud" />
+                <xs:element ref="latitud" />
+                <xs:element ref="altitud" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Longitud, latitud y altitud con tipo float -->
+    <!-- Longitud -->
+<xs:element name="longitud">
+    <xs:simpleType>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="-180"/>
+            <xs:maxInclusive value="180"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<!-- Latitud -->
+<xs:element name="latitud">
+    <xs:simpleType>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="-90"/>
+            <xs:maxInclusive value="90"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<!-- Altitud -->
+<xs:element name="altitud">
+    <xs:simpleType>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="-500"/>
+            <xs:maxInclusive value="8848"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+    <!-- Tramos del circuito -->
+    <xs:element name="tramosCircuito">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="tramo" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Tramo con distancia y sector -->
+    <xs:element name="tramo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="longitud" />
+                <xs:element ref="latitud" />
+                <xs:element ref="altitud" />
+                <xs:element ref="sector" />
+            </xs:sequence>
+            <xs:attribute name="distancia" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:float">
+                        <xs:minInclusive value="0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Sector -->
+    <xs:element name="sector" type="xs:string" />
+</xs:schema>

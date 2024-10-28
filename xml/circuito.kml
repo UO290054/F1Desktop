@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Circuito</name>
+    <Placemark>
+        <name>Punto de Inicio</name>
+        <Point>
+            <coordinates>4.5409264,52.388999,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 345.13 metros</name>
+        <Point>
+            <coordinates>4.5426313,52.391604,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 85.26 metros</name>
+        <Point>
+            <coordinates>4.5433662,52.3918364,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 61.37 metros</name>
+        <Point>
+            <coordinates>4.5437846,52.3914731,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 161.07 metros</name>
+        <Point>
+            <coordinates>4.5429725,52.3902682,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 120.88 metros</name>
+        <Point>
+            <coordinates>4.542833,52.3891878,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 160.4 metros</name>
+        <Point>
+            <coordinates>4.541455,52.3887365,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 50.21 metros</name>
+        <Point>
+            <coordinates>4.5411608,52.3883919,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 70.57 metros</name>
+        <Point>
+            <coordinates>4.5417509,52.3881497,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 264.06 metros</name>
+        <Point>
+            <coordinates>4.5441113,52.3885098,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 316.33 metros</name>
+        <Point>
+            <coordinates>4.5469651,52.3883134,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 251.15 metros</name>
+        <Point>
+            <coordinates>4.5491482,52.3889376,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 307.0 metros</name>
+        <Point>
+            <coordinates>4.5519242,52.3889039,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 127.66 metros</name>
+        <Point>
+            <coordinates>4.5529434,52.3883637,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 79.21 metros</name>
+        <Point>
+            <coordinates>4.5529541,52.38765,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 277.81 metros</name>
+        <Point>
+            <coordinates>4.5512268,52.3858321,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 214.82 metros</name>
+        <Point>
+            <coordinates>4.5492849,52.3858845,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 144.89 metros</name>
+        <Point>
+            <coordinates>4.5481476,52.3865328,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 86.49 metros</name>
+        <Point>
+            <coordinates>4.5488342,52.386906,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 218.85 metros</name>
+        <Point>
+            <coordinates>4.5507869,52.3872269,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 62.68 metros</name>
+        <Point>
+            <coordinates>4.5511088,52.3876918,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 89.4 metros</name>
+        <Point>
+            <coordinates>4.5503792,52.3880388,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 398.94 metros</name>
+        <Point>
+            <coordinates>4.5467733,52.3879266,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 327.76 metros</name>
+        <Point>
+            <coordinates>4.5438761,52.3873034,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 88.97 metros</name>
+        <Point>
+            <coordinates>4.5430929,52.38712,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 91.42 metros</name>
+        <Point>
+            <coordinates>4.5423526,52.3874867,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 70.94 metros</name>
+        <Point>
+            <coordinates>4.5419341,52.3870022,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 234.46 metros</name>
+        <Point>
+            <coordinates>4.5425536,52.3849816,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 92.73 metros</name>
+        <Point>
+            <coordinates>4.5419528,52.3843987,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 274.19 metros</name>
+        <Point>
+            <coordinates>4.5394795,52.3845737,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 156.1 metros</name>
+        <Point>
+            <coordinates>4.5386426,52.3857065,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 177.85 metros</name>
+        <Point>
+            <coordinates>4.5395439,52.3870339,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 189.61 metros</name>
+        <Point>
+            <coordinates>4.5404865,52.3884612,2</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <name>Tramo: 76.99 metros</name>
+        <Point>
+            <coordinates>4.5409264,52.388999,2</coordinates>
+        </Point>
+    </Placemark>
+</Document>
+</kml>
