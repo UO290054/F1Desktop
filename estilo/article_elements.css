@@ -1,0 +1,25 @@
+/* article_elements.css */
+
+/* Estilos generales para los artículos */
+article {
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.3125rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de artículos */
+article h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 0.625rem;
+}
+
+/* Texto de párrafos dentro de artículos */
+article p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}

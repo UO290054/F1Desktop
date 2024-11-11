@@ -15,6 +15,8 @@ de las palabras clave del mismo separadas por comas" />
  
  
  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/agenda_grid.css">
+
 </head>
 <body>
   <!-- Header agrupando el título y la navegación -->
@@ -35,6 +37,17 @@ de las palabras clave del mismo separadas por comas" />
 <p>Estás en: <a href="index.html">Inicio</a> >> Calendario</p>
  <h2>Calendario</h2> 
  <p>En desarrollo</p>
+ <section id="agenda">
+  <h2>Agenda de Fórmula 1</h2>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/agenda.js"></script>
+<script>
+  $(document).ready(function() {
+      const agenda = new AgendaF1();
+      agenda.obtenerEventos();
+  });
+</script>
 
 
 </body>

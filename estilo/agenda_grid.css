@@ -1,0 +1,30 @@
+/* agenda_grid.css */
+
+/* Estilos para el contenedor de la agenda */
+#agenda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Coloca los artículos en una cuadrícula responsive */
+    gap: 1.25rem; /* Espacio entre artículos */
+    padding: 1.25rem;
+}
+
+/* Estilos para cada artículo en la agenda */
+#agenda article {
+    background-color: #f8f9fa;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#agenda article h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.625rem;
+}
+
+#agenda article p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}

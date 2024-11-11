@@ -1,52 +1,70 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
- <!-- Datos que describen el documento -->
- <meta charset="UTF-8" />
- <meta name="author" content="Raymond Deabsa Peralta" />
- <meta name="description" content="aquí cada documento debe tener la descripción del contenido concreto del mismo" />
- <meta name="keywords" content="aquí cada documento debe tener la lista de las palabras clave del mismo separadas por comas" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Raymond Deabsa Peralta" />
+    <meta name="description" content="aquí cada documento debe tener la descripción del contenido concreto del mismo" />
+    <meta name="keywords" content="aquí cada documento debe tener la lista de las palabras clave del mismo separadas por comas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <title>F1 Desktop</title>
- <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
- <script src="js/pais.js"></script>
+    <title>F1 Desktop</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/article_elements.css">
+
+    <!-- Incluye jQuery antes de pais.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/pais.js"></script>
+    
 </head>
 <body>
-  <!-- Header agrupando el título y la navegación -->
-  <header>
-    <h1><a href="index.html">F1 Desktop</a></h1>
-    <nav>
-        <a href="index.html" accesskey="1" tabindex="1">Inicio</a>
-        <a href="piloto.html" accesskey="2" tabindex="2">Piloto</a>
-        <a href="noticias.html" accesskey="3" tabindex="3">Noticias</a>
-        <a href="calendario.html" accesskey="4" tabindex="4">Calendario</a>
-        <a href="meteorologia.html" accesskey="5" tabindex="5">Meteorología</a>
-        <a href="circuito.html" accesskey="6" tabindex="6">Circuito</a>
-        <a href="viajes.html" accesskey="7" tabindex="7">Viajes</a>
-        <a href="juegos.html" accesskey="8" tabindex="8">Juegos</a>
-    </nav>
-  </header>
+    <!-- Header agrupando el título y la navegación -->
+    <header>
+        <h1><a href="index.html">F1 Desktop</a></h1>
+        <nav>
+            <a href="index.html" accesskey="1" tabindex="1">Inicio</a>
+            <a href="piloto.html" accesskey="2" tabindex="2">Piloto</a>
+            <a href="noticias.html" accesskey="3" tabindex="3">Noticias</a>
+            <a href="calendario.html" accesskey="4" tabindex="4">Calendario</a>
+            <a href="meteorologia.html" accesskey="5" tabindex="5">Meteorología</a>
+            <a href="circuito.html" accesskey="6" tabindex="6">Circuito</a>
+            <a href="viajes.html" accesskey="7" tabindex="7">Viajes</a>
+            <a href="juegos.html" accesskey="8" tabindex="8">Juegos</a>
+        </nav>
+    </header>
 
-  <!-- Migas de navegación -->
-  <p>Estás en: <a href="index.html">Inicio</a> >> Meteorología</p>
+    <!-- Migas de navegación -->
+    <p>Estás en: <a href="index.html">Inicio</a> >> Meteorología</p>
 
-  <h2>Meteorología</h2>
-  <!-- Aquí está la información que hemos agregado usando JavaScript -->
-  <section>
-    <h2>Datos sobre Países Bajos</h2>
+    <!-- Información de Países Bajos -->
+    <h2>Meteorología</h2>
+    <section>
+        <h3>Datos sobre Países Bajos</h3>
+        <article id="info-principal"></article>
+        <article id="info-secundaria"></article>
+        <article id="coordenadas-meta"></article>
+    </section>
+
+    <!-- Contenedor del pronóstico del tiempo -->
+    <section id="pronostico">
+        <h2>Pronóstico del tiempo para los próximos 5 días</h2>
+    </section>
+
+    <!-- Script para inicializar el objeto País y mostrar la información y pronóstico -->
     <script>
-      // Creación del objeto Países Bajos y mostrar la información
-      const paisesBajos = new Pais('Países Bajos', 'Ámsterdam', 'Circuito de Zandvoort', 17480000);
-      paisesBajos.setAtributosExtras('Monarquía parlamentaria', '52.39°N, 4.54°E', 'Cristianismo');
+        $(document).ready(function() {
+            // Creación del objeto Países Bajos y mostrar la información
+            const paisesBajos = new Pais('Países Bajos', 'Ámsterdam', 'Circuito de Zandvoort', 17480000);
+            paisesBajos.setAtributosExtras('Monarquía parlamentaria', '52.39°N, 4.54°E', 'Cristianismo');
 
-      document.write(paisesBajos.getInfoPrincipal());
-      document.write(paisesBajos.getInfoSecundaria());
-      paisesBajos.escribirCoordenadasMeta();
+            // Insertar la información del país en los contenedores
+            $('#info-principal').html(paisesBajos.getInfoPrincipal());
+            $('#info-secundaria').html(paisesBajos.getInfoSecundaria());
+            $('#coordenadas-meta').html(`Coordenadas de la línea de meta: ${paisesBajos.coordenadasMeta}`);
+
+            // Llamada para obtener el pronóstico
+            paisesBajos.obtenerPronostico();
+        });
     </script>
-  </section>
-
- 
-
 </body>
 </html>
