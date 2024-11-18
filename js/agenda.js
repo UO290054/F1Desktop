@@ -1,6 +1,6 @@
 class AgendaF1 {
     constructor() {
-        this.apiUrl = 'https://api.example.com/formula1/events'; // URL de la API o fuente de datos
+        this.apiUrl = 'http://ergast.com/api/f1/2024.json'; // URL de la API original de Ergast
     }
 
     // Método para obtener los eventos de la agenda
@@ -10,7 +10,8 @@ class AgendaF1 {
             method: 'GET',
             success: (response) => {
                 console.log(response); // Ver la respuesta en la consola para depuración
-                this.mostrarEventos(response);
+                const carreras = response.MRData.RaceTable.Races;
+                this.mostrarEventos(carreras);
             },
             error: (error) => {
                 console.error("Error en la llamada a la API de eventos de Fórmula 1", error);
@@ -19,34 +20,33 @@ class AgendaF1 {
     }
 
     // Método para mostrar los eventos en el HTML
-    mostrarEventos(data) {
-        $('#agenda').empty(); // Limpia el contenido previo en el contenedor de la agenda
+mostrarEventos(carreras) {
+    const agenda = $('#agenda'); // Sección de eventos
+    agenda.empty(); // Limpia únicamente los eventos
 
-        data.events.forEach(evento => {
-            const fecha = evento.date;
-            const nombre = evento.name;
-            const lugar = evento.location;
+    carreras.forEach(carrera => {
+        const fecha = carrera.date;
+        const hora = carrera.time || 'Hora no disponible';
+        const nombreCarrera = carrera.raceName;
+        const circuito = carrera.Circuit.circuitName;
+        const localizacion = carrera.Circuit.Location;
+        const lugar = `${localizacion.locality}, ${localizacion.country}`;
+        const latitud = localizacion.lat;
+        const longitud = localizacion.long;
 
-            const contenido = `
-                <article>
-                    <h3>${nombre}</h3>
-                    <p>Fecha: ${fecha}</p>
-                    <p>Ubicación: ${lugar}</p>
-                </article>
-            `;
-            $('#agenda').append(contenido);
-        });
-    }
+        const contenido = `
+            <article>
+                <h3>${nombreCarrera}</h3>
+                <p><strong>Circuito:</strong> ${circuito}</p>
+                <p><strong>Fecha:</strong> ${fecha}</p>
+                <p><strong>Hora:</strong> ${hora}</p>
+                <p><strong>Ubicación:</strong> ${lugar}</p>
+                <p><strong>Coordenadas:</strong> ${latitud}, ${longitud}</p>
+            </article>
+        `;
+       agenda.append(contenido);
+    });
 }
-const eventosSimulados = {
-    events: [
-        { date: '2024-03-10', name: 'Gran Premio de Bahréin', location: 'Sakhir' },
-        { date: '2024-03-24', name: 'Gran Premio de Arabia Saudita', location: 'Yeda' },
-        { date: '2024-04-07', name: 'Gran Premio de Australia', location: 'Melbourne' },
-    ]
-};
 
-// Reemplaza el método obtenerEventos para usar los datos simulados
-AgendaF1.prototype.obtenerEventos = function() {
-    this.mostrarEventos(eventosSimulados);
-};
+
+}

@@ -66,6 +66,8 @@ class Pais {
             const humedad = $(this).find('humidity').attr('value');
             const descripcion = $(this).find('symbol').attr('name');
             const icono = $(this).find('symbol').attr('var');
+            const lluvia = $(this).find('precipitation').attr('value') || '0 mm';
+
 
             const contenido = `
                 <article>
@@ -74,6 +76,7 @@ class Pais {
                     <p>Temperatura Mín: ${temperaturaMin}°C</p>
                     <p>Humedad: ${humedad}%</p>
                     <p>Descripción: ${descripcion}</p>
+                    <p>Cantidad de lluvia: ${lluvia}</p>
                     <img src="https://openweathermap.org/img/wn/${icono}.png" alt="${descripcion}">
                 </article>
             `;
