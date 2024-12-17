@@ -16,47 +16,65 @@ def generate_kml(input_xml, output_kml):
         kml_file.write('<Document>\n')
         kml_file.write('<name>Circuito</name>\n')
 
-        # Procesar el punto inicial (usando namespace en XPath)
+        # Obtener las coordenadas del punto inicial
         inicio = root.find('.//uniovi:coordenadasInicio', namespaces)
-        if inicio is not None:
-            longitud_inicio = inicio.find('uniovi:longitud', namespaces).text if inicio.find('uniovi:longitud', namespaces) is not None else '0'
-            latitud_inicio = inicio.find('uniovi:latitud', namespaces).text if inicio.find('uniovi:latitud', namespaces) is not None else '0'
-            altitud_inicio = inicio.find('uniovi:altitud', namespaces).text if inicio.find('uniovi:altitud', namespaces) is not None else '0'
-            
-            print(f"Coordenadas de inicio: longitud={longitud_inicio}, latitud={latitud_inicio}, altitud={altitud_inicio}")
-            
-            # Escribir el punto de inicio en el KML
-            kml_file.write('    <Placemark>\n')
-            kml_file.write('        <name>Punto de Inicio</name>\n')
-            kml_file.write('        <Point>\n')
-            kml_file.write('            <coordinates>{},{},{}</coordinates>\n'.format(longitud_inicio, latitud_inicio, altitud_inicio))
-            kml_file.write('        </Point>\n')
-            kml_file.write('    </Placemark>\n')
+        longitud_inicio = inicio.find('uniovi:longitud', namespaces).text if inicio.find('uniovi:longitud', namespaces) is not None else '0'
+        latitud_inicio = inicio.find('uniovi:latitud', namespaces).text if inicio.find('uniovi:latitud', namespaces) is not None else '0'
+        altitud_inicio = inicio.find('uniovi:altitud', namespaces).text if inicio.find('uniovi:altitud', namespaces) is not None else '0'
 
-        # Procesar los tramos del circuito (usando namespace en XPath)
+        # Escribir el marcador de la meta
+        kml_file.write('    <Placemark>\n')
+        kml_file.write('        <name>Meta</name>\n')  # Nombre del marcador como "Meta"
+        kml_file.write('        <Style>\n')
+        kml_file.write('            <IconStyle>\n')
+        kml_file.write('                <color>ff0000ff</color>\n')  # Azul
+        kml_file.write('                <scale>1.2</scale>\n')
+        kml_file.write('                <Icon>\n')
+        kml_file.write('                    <href>http://maps.google.com/mapfiles/kml/paddle/1.png</href>\n')  # Icono
+        kml_file.write('                </Icon>\n')
+        kml_file.write('            </IconStyle>\n')
+        kml_file.write('        </Style>\n')
+        kml_file.write('        <Point>\n')
+        kml_file.write('            <coordinates>{},{},{}</coordinates>\n'.format(longitud_inicio, latitud_inicio, altitud_inicio))
+        kml_file.write('        </Point>\n')
+        kml_file.write('    </Placemark>\n')
+
+        # Generar la LineString con color rojo
+        kml_file.write('    <Placemark>\n')
+        kml_file.write('        <name>Ruta del Circuito</name>\n')
+        kml_file.write('        <Style>\n')
+        kml_file.write('            <LineStyle>\n')
+        kml_file.write('                <color>ff0000ff</color>\n')  # Rojo (en formato KML: AABBGGRR)
+        kml_file.write('                <width>3</width>\n')  # Grosor de la línea
+        kml_file.write('            </LineStyle>\n')
+        kml_file.write('        </Style>\n')
+        kml_file.write('        <LineString>\n')
+        kml_file.write('            <coordinates>\n')
+
+        # Añadir la coordenada inicial al principio
+        kml_file.write(f'                {longitud_inicio},{latitud_inicio},{altitud_inicio}\n')
+
+        # Procesar todos los tramos y añadir las coordenadas
         for tramo in root.findall('.//uniovi:tramosCircuito/uniovi:tramo', namespaces):
             longitud = tramo.find('uniovi:longitud', namespaces).text if tramo.find('uniovi:longitud', namespaces) is not None else '0'
             latitud = tramo.find('uniovi:latitud', namespaces).text if tramo.find('uniovi:latitud', namespaces) is not None else '0'
             altitud = tramo.find('uniovi:altitud', namespaces).text if tramo.find('uniovi:altitud', namespaces) is not None else '0'
-            distancia = tramo.attrib.get('distancia', '0')  # Obtener distancia si está disponible
-            
-            # Imprimir los valores para depuración
-            print(f"Tramo distancia={distancia}, longitud={longitud}, latitud={latitud}, altitud={altitud}")
-            
-            # Escribir la coordenada del tramo en el KML
-            kml_file.write('    <Placemark>\n')
-            kml_file.write('        <name>Tramo: {} metros</name>\n'.format(distancia))
-            kml_file.write('        <Point>\n')
-            kml_file.write('            <coordinates>{},{},{}</coordinates>\n'.format(longitud, latitud, altitud))
-            kml_file.write('        </Point>\n')
-            kml_file.write('    </Placemark>\n')
+            kml_file.write(f'                {longitud},{latitud},{altitud}\n')
+
+        # Añadir la coordenada inicial al final para cerrar el circuito
+        kml_file.write(f'                {longitud_inicio},{latitud_inicio},{altitud_inicio}\n')
+
+        # Cerrar LineString
+        kml_file.write('            </coordinates>\n')
+        kml_file.write('        </LineString>\n')
+        kml_file.write('    </Placemark>\n')
 
         # Cerrar el KML
         kml_file.write('</Document>\n')
         kml_file.write('</kml>\n')
 
 if __name__ == "__main__":
-    input_xml = 'circuitoEsquema.xml'  # Nombre del archivo XML de entrada
-    output_kml = 'circuito.kml'        # Nombre del archivo KML de salida
+    input_xml = 'circuitoEsquema.xml'  # Archivo XML de entrada
+    output_kml = 'circuito.kml'        # Archivo KML de salida
     generate_kml(input_xml, output_kml)
     print(f"KML generado: {output_kml}")

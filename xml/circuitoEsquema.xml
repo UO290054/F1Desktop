@@ -39,7 +39,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="345.13">
             <longitud>4.5426313</longitud>
             <latitud>52.391604</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -48,7 +48,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="85.26">
             <longitud>4.5433662</longitud>
             <latitud>52.3918364</latitud>
-            <altitud>2</altitud>
+            <altitud>5</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -57,7 +57,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="61.37">
             <longitud>4.5437846</longitud>
             <latitud>52.3914731</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -66,7 +66,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="161.07">
             <longitud>4.5429725</longitud>
             <latitud>52.3902682</latitud>
-            <altitud>2</altitud>
+            <altitud>7</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -75,7 +75,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="120.88">
             <longitud>4.542833</longitud>
             <latitud>52.3891878</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -84,7 +84,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="160.4">
             <longitud>4.541455</longitud>
             <latitud>52.3887365</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -102,7 +102,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="70.57">
             <longitud>4.5417509</longitud>
             <latitud>52.3881497</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -111,7 +111,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="264.06">
             <longitud>4.5441113</longitud>
             <latitud>52.3885098</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -120,7 +120,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="316.33">
             <longitud>4.5469651</longitud>
             <latitud>52.3883134</latitud>
-            <altitud>2</altitud>
+            <altitud>3</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -129,7 +129,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="251.15">
             <longitud>4.5491482</longitud>
             <latitud>52.3889376</latitud>
-            <altitud>2</altitud>
+            <altitud>3</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -138,7 +138,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="307.0">
             <longitud>4.5519242</longitud>
             <latitud>52.3889039</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>1</sector>
         </tramo>
     
@@ -147,7 +147,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="127.66">
             <longitud>4.5529434</longitud>
             <latitud>52.3883637</latitud>
-            <altitud>2</altitud>
+            <altitud>5</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -156,7 +156,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="79.21">
             <longitud>4.5529541</longitud>
             <latitud>52.38765</latitud>
-            <altitud>2</altitud>
+            <altitud>5</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -165,7 +165,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="277.81">
             <longitud>4.5512268</longitud>
             <latitud>52.3858321</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -174,7 +174,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="214.82">
             <longitud>4.5492849</longitud>
             <latitud>52.3858845</latitud>
-            <altitud>2</altitud>
+            <altitud>7</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -183,7 +183,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="144.89">
             <longitud>4.5481476</longitud>
             <latitud>52.3865328</latitud>
-            <altitud>2</altitud>
+            <altitud>5</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -192,7 +192,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="86.49">
             <longitud>4.5488342</longitud>
             <latitud>52.386906</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -201,7 +201,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="218.85">
             <longitud>4.5507869</longitud>
             <latitud>52.3872269</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -210,7 +210,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="62.68">
             <longitud>4.5511088</longitud>
             <latitud>52.3876918</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -219,7 +219,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="89.4">
             <longitud>4.5503792</longitud>
             <latitud>52.3880388</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -228,7 +228,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="398.94">
             <longitud>4.5467733</longitud>
             <latitud>52.3879266</latitud>
-            <altitud>2</altitud>
+            <altitud>3</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -237,7 +237,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="327.76">
             <longitud>4.5438761</longitud>
             <latitud>52.3873034</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -246,7 +246,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="88.97">
             <longitud>4.5430929</longitud>
             <latitud>52.38712</latitud>
-            <altitud>2</altitud>
+            <altitud>3</altitud>
             <sector>2</sector>
         </tramo>
     
@@ -282,7 +282,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="92.73">
             <longitud>4.5419528</longitud>
             <latitud>52.3843987</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>3</sector>
         </tramo>
     
@@ -291,7 +291,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="274.19">
             <longitud>4.5394795</longitud>
             <latitud>52.3845737</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>3</sector>
         </tramo>
     
@@ -300,7 +300,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="156.1">
             <longitud>4.5386426</longitud>
             <latitud>52.3857065</latitud>
-            <altitud>2</altitud>
+            <altitud>6</altitud>
             <sector>3</sector>
         </tramo>
     
@@ -309,7 +309,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="177.85">
             <longitud>4.5395439</longitud>
             <latitud>52.3870339</latitud>
-            <altitud>2</altitud>
+            <altitud>4</altitud>
             <sector>3</sector>
         </tramo>
     
@@ -318,7 +318,7 @@ xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
         <tramo distancia="189.61">
             <longitud>4.5404865</longitud>
             <latitud>52.3884612</latitud>
-            <altitud>2</altitud>
+            <altitud>3</altitud>
             <sector>3</sector>
         </tramo>
     

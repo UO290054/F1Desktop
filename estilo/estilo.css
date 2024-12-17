@@ -285,6 +285,8 @@ video {
 
 /* Especificidad 001 - Adaptabilidad para audios */
 audio {
+  display: block; /* Asegura que se muestre */
+  margin: 1rem 0; /* Espaciado arriba y abajo */
   max-width: 100%; /* El audio no excederá el ancho de su contenedor */
   height: auto; /* Mantiene la proporción del audio */
 }
