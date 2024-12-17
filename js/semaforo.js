@@ -60,6 +60,21 @@ class Semaforo {
         this.startTime = 0;
         this.reaccionarBtn.disabled = true; // Desactivar el botón hasta que el juego comience
     }
+
+     createRecordForm(difficulty, reactionTime) {
+        const formHtml = `
+            <form action="semaforo.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                <input type="hidden" name="nivel" value="${difficulty}">
+                <input type="hidden" name="tiempo" value="${reactionTime}">
+                <button type="submit">Guardar récord</button>
+            </form>`;
+        document.querySelector('#formContainer').innerHTML = formHtml;
+    }
+    
 }
 
 // Inicializar el semáforo al cargar la página
